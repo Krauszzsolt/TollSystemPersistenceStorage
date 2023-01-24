@@ -18,7 +18,6 @@ public class TollSystemSqlitePersistenceStorage implements TollSystempersistence
     public ArrayList<MotorwayVignette> selectByRegistrationNumber(String RegistrationNumber){
         ArrayList<MotorwayVignette> vignettes = new ArrayList<>();
         String sql = "SELECT * FROM motorway_vignette WHERE registration_number =  '" + RegistrationNumber + "';";
-        System.out.println(sql);
 
         try {
             Connection conn = this.connect();
